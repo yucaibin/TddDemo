@@ -6,10 +6,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 import org.mockito.InjectMocks;
 import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
 import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
@@ -20,6 +18,7 @@ public class TestmanagerImplTest {
 
     //    @Mock
 //    FileUploadManager fileUploadManager;
+
     @InjectMocks
     TestmanagerImpl testmanager;
     @Before
@@ -28,19 +27,17 @@ public class TestmanagerImplTest {
         testmanager = PowerMockito.spy(new TestmanagerImpl());
     }
 
-
     @After
     public void tearDown() {
     }
 
     @Test
-    public void getDate() {
+    public void getDate() throws Exception{
         // Mock 静态方法
         PowerMockito.mockStatic(DateFormatUtil.class);
         Mockito.when(DateFormatUtil.getStr(Mockito.anyString())).thenReturn("2020-20-20");
 
         // 调用测试方法
-//        TestmanagerImpl testmanager = new TestmanagerImpl();
         String s = testmanager.getDate();
         Assert.assertTrue(true);
     }
@@ -51,11 +48,8 @@ public class TestmanagerImplTest {
         PowerMockito.mockStatic(DateFormatUtil.class);
         Mockito.when(DateFormatUtil.getStr(Mockito.anyString())).thenReturn("2020-20-20");
 
-//        TestmanagerImpl testmanager = PowerMockito.spy(new TestmanagerImpl());
         PowerMockito.when(testmanager, "privateMethod", Mockito.anyString()).thenReturn("22222");
 
-
-//        String realResult = testmanager.privateFunc();
         String s = testmanager.getDate();
         Assert.assertTrue(true);
 
