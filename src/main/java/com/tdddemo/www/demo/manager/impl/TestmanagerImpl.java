@@ -8,6 +8,12 @@ public class TestmanagerImpl implements TestManager {
 
     public String getDate() {
         String ss = DateFormatUtil.getStr("sdsd");
+        String privateMethod = privateMethod("sss");
         return ss;
+    }
+
+    private String privateMethod(String str){
+
+        return str;
     }
 }
