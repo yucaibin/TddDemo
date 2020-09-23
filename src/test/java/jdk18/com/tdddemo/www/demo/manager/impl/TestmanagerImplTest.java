@@ -1,5 +1,6 @@
-package com.tdddemo.www.demo.manager.impl;
+package jdk18.com.tdddemo.www.demo.manager.impl;
 
+import com.tdddemo.www.demo.manager.impl.TestmanagerImpl;
 import com.tdddemo.www.demo.utils.DateFormatUtil;
 import org.junit.After;
 import org.junit.Assert;
@@ -13,7 +14,7 @@ import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
 @RunWith(PowerMockRunner.class)
-@PrepareForTest({DateFormatUtil.class,TestmanagerImpl.class})
+@PrepareForTest({DateFormatUtil.class, TestmanagerImpl.class})
 public class TestmanagerImplTest {
 
     //    @Mock
