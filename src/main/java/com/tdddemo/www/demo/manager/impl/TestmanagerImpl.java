@@ -15,8 +15,17 @@ public class TestmanagerImpl implements TestManager {
 
     public String getFormatDate() {
         String ss = DateFormatUtil.format(new Date());
-        String s1 = DateFormatUtils.format(new Date(),"1qwq");
+        String s1 = DateFormatUtils.format(new Date(), "1qwq");
         String getFormatDate = testServcie.getFormatDate(new Date());
+    }
+    public String getDate() {
+        String ss = DateFormatUtil.getStr("sdsd");
+        String privateMethod = privateMethod("sss");
         return ss;
+    }
+
+    private String privateMethod(String str){
+
+        return str;
     }
 }
