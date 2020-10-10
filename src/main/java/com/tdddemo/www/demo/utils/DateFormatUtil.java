@@ -60,9 +60,4 @@ public class DateFormatUtil extends DateFormatUtils {
         }
         return date;
     }
-
-    public static String getStr(String ss) {
-        return "11213131";
-    }
-
 }
