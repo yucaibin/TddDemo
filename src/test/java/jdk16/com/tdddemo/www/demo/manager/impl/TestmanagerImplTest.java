@@ -58,7 +58,7 @@ public class TestmanagerImplTest {
     public void privateMethod() throws Exception{
         // Mock 静态方法
         PowerMockito.mockStatic(DateFormatUtil.class);
-        Mockito.when(DateFormatUtil.getStr(Mockito.anyString())).thenReturn("2020-20-20");
+        Mockito.when(DateFormatUtil.format(Mockito.anyObject())).thenReturn("2020-20-20");
 
         PowerMockito.when(testmanager, "privateMethod", Mockito.anyString()).thenReturn("22222");
 

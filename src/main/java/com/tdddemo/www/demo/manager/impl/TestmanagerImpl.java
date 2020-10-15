@@ -15,13 +15,15 @@ public class TestmanagerImpl implements TestManager {
 
     public String getFormatDate() {
         String ss = DateFormatUtil.format(new Date());
-        String s1 = DateFormatUtils.format(new Date(), "1qwq");
+//        String s1 = DateFormatUtils.format(new Date(), "1qwq");
+        String s1 = DateFormatUtils.format(1111L, "1qwq");
         String getFormatDate = testServcie.getFormatDate(new Date());
+        return getFormatDate;
     }
     public String getDate() {
-        String ss = DateFormatUtil.getStr("sdsd");
+        String ss = DateFormatUtils.format(new Date(), "sdsd");
         String privateMethod = privateMethod("sss");
-        return ss;
+        return privateMethod;
     }
 
     private String privateMethod(String str){
