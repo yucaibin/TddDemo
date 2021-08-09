@@ -2,6 +2,7 @@ package com.tdddemo.www.demo.manager.impl;
 
 import com.tdddemo.www.demo.manager.TestManager;
 import com.tdddemo.www.demo.service.TestServcie;
+import com.tdddemo.www.demo.manager.UserManager;
 import com.tdddemo.www.demo.utils.DateFormatUtil;
 import org.apache.commons.lang3.time.DateFormatUtils;
 
@@ -12,6 +13,7 @@ public class TestmanagerImpl implements TestManager {
 
     @Resource
     private TestServcie testServcie;
+    private UserManagerImpl userManager;
 
     public String getFormatDate() {
         String ss = DateFormatUtil.format(new Date());
@@ -23,7 +25,9 @@ public class TestmanagerImpl implements TestManager {
     public String getDate() {
         String ss = DateFormatUtils.format(new Date(), "sdsd");
         String privateMethod = privateMethod("sss");
-        return privateMethod;
+//        return privateMethod;
+        String userName = userManager.getUserName("112");
+        return ss;
     }
 
     private String privateMethod(String str){
