@@ -25,7 +25,7 @@ public class TestmanagerImpl implements TestManager {
     public String getDate() {
         String ss = DateFormatUtils.format(new Date(), "sdsd");
         String privateMethod = privateMethod("sss");
-//        return privateMethod;
+//        return privateMethod; 
         String userName = userManager.getUserName("112");
         return ss;
     }
