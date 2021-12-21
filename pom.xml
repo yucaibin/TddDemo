@@ -166,6 +166,11 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.1</version>
         </dependency>
+        <dependency>
+            <artifactId>mockito-core</artifactId>
+            <groupId>org.mockito</groupId>
+            <version>1.10.19</version>
+        </dependency>
 
 
     </dependencies>
