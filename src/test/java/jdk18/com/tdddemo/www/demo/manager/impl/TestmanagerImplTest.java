@@ -22,7 +22,7 @@ import static org.mockito.Mockito.doReturn;
 
 import java.util.Date;
 
-@RunWith(PowerMockRunner.class)
+@RunWith(PowerMockRunner.class)//如果启动不了.可注释掉试一下
 @PrepareForTest({DateFormatUtil.class, TestmanagerImpl.class,UserManagerImpl.class})
 public class TestmanagerImplTest {
 
@@ -82,5 +82,22 @@ public class TestmanagerImplTest {
         String s = testmanager.getFormatDate();
         Assert.assertTrue(true);
 
+    }
+
+    /**
+     * 普通调用
+     * @throws Exception
+     */
+    @Test
+    public void getPuTongDate() throws Exception{
+
+        Mockito.when(userManager.getUserName(Mockito.anyString())).thenReturn("aaaaa");
+
+        //注入属性
+        ReflectionTestUtils.setField(testmanager, "userManager", userManager);
+
+        // 调用测试方法
+        String s = testmanager.getDate();
+        Assert.assertTrue(true);
     }
 }
